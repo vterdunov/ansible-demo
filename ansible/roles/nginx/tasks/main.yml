@@ -1,0 +1,14 @@
+---
+- name: Install nginx.
+  apt:
+    name: nginx
+    state: present
+  register: nginx_install
+
+- name: Verify nginx installation
+  assert:
+    that:
+      - nginx_install is success
+      - nginx_install is not failed
+      - nginx_install.changed == false
+    fail_msg: "Nginx installation error."

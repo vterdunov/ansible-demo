@@ -1,0 +1,16 @@
+---
+all:
+  children:
+    webservers:
+      children:
+        nginx:
+          hosts:
+            nginx-1:
+              ansible_host: 104.248.245.78
+              ansible_user: deploy
+
+        apache:
+          hosts:
+            apache-1:
+              ansible_host: 167.99.248.157
+              ansible_user: deploy
