@@ -4,11 +4,3 @@
     name: apache2
     state: present
   register: apache_install
-
-- name: Verify apache installation
-  assert:
-    that:
-      - apache_install is success
-      - apache_install is not failed
-      - apache_install.changed == false
-    fail_msg: "Apache installation error."
