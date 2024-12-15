@@ -1,0 +1,20 @@
+---
+- name: Install Apache
+  hosts: apache
+  gather_facts: true
+  become: true
+
+  roles:
+    - role: apache
+      tags:
+        - apache
+
+- name: Install Nginx
+  hosts: nginx
+  gather_facts: true
+  become: true
+
+  roles:
+    - role: nginx
+      tags:
+        - nginx

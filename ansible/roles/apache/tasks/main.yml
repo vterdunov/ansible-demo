@@ -3,4 +3,3 @@
   apt:
     name: apache2
     state: present
-  register: apache_install

@@ -3,4 +3,3 @@
   apt:
     name: nginx
     state: present
-  register: nginx_install
